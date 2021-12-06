@@ -16,6 +16,7 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
+                            localsConvention: "camelCase",
                             modules: true,
                         }
                     },
