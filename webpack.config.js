@@ -25,16 +25,6 @@ module.exports = {
         ]
     },
     "resolve": {
-        "alias": {
-            "react": "preact/compat",
-            "react-dom": "preact/compat",
-        },
         mainFiles: ['index']
     },
-    "plugins": [
-        new webpack.ProvidePlugin({
-            'h': ['preact', 'h'],
-            'Fragment': ['preact', 'Fragment'],
-        })
-    ]
 };
