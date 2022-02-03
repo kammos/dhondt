@@ -22,6 +22,12 @@ module.exports = {
                     },
                     'sass-loader'
                 ],
+            }, {
+                test: /\.(png|svg)$/i, 
+                loader: 'file-loader',
+                options: {
+                    name: '[name]_[contenthash].[ext]'
+                }
             }
         ]
     },
