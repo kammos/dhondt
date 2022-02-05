@@ -3,8 +3,6 @@
     border: 1px solid #2d8b92;
     border-radius: 2px;
     padding: 8px;
-    text-align: right;
-    color: #2d8b92;
     transition: all 0.2s;
     outline: 2px transparent solid;
     display: inline-flex;
@@ -26,6 +24,11 @@
 
 .label.checkbox {
     cursor: default;
+}
+
+.labelText {
+    color: #2d8b92;
+    white-space: nowrap;
 }
 
 .input {
