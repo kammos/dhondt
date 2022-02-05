@@ -17,7 +17,9 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             localsConvention: "camelCase",
-                            modules: true,
+                            modules: {
+                                localIdentName: "[local]-[hash:base64:5]"
+                            },
                         }
                     },
                     'sass-loader'
