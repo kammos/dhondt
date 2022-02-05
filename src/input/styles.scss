@@ -11,10 +11,15 @@
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
+    cursor: text;
 
     &:focus-within {
         border-color: #254971;
         outline: 2px #254971 solid;
+        background-color: rgba(#84B5A2, 0.2);
+    }
+
+    &:hover {
         background-color: rgba(#84B5A2, 0.2);
     }
 }
