@@ -17,6 +17,7 @@
     "@babel/preset-react": "^7.10.1",
     "@reduxjs/toolkit": "^1.7.1",
     "babel-loader": "^8.1.0",
+    "cnbuilder": "^3.1.0",
     "css-loader": "^3.6.0",
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
