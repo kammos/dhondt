@@ -46,6 +46,16 @@
     background-clip: text;
 }
 
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .input[type="checkbox"] {
     appearance: none;
     background-color: transparent;
@@ -69,6 +79,6 @@
     }
 
     &:checked::before {
-        transform: scale(1.0);
+        transform: scale(1);
     }
 }
