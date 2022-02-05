@@ -1,0 +1,33 @@
+.label {
+    outline: none;
+    border: 1px solid #2D8B92;
+    border-radius: 2px;
+    padding: 0px 8px;
+    text-align: right;
+    color: #2D8B92;
+    transition: all 0.2s;
+    outline: 2px transparent solid;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+
+    &:focus-within {
+        border-color: #254971;
+        outline: 2px #254971 solid;
+        background-color: rgba(#84B5A2, 0.2);
+    }
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: transparent;
+    text-align: right;
+    color: #1E0741 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 8px;
+    /* so that autofill in Chrome doesn't ruin colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
