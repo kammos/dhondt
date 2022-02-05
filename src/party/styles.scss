@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    gap: 8px;
+    grid-template: 
+        minmax(0, 1fr) minmax(0, 1fr)/ 
+        minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.cross-icon {
+    height: 36px;
+    width: 36px;
+    background-color: #84b5a2;
+    clip-path: polygon(10% 0%, 0% 10%, 30% 50%, 0% 90%, 10% 100%, 50% 70%, 90% 100%, 100% 90%, 70% 50%, 100% 10%, 90% 0%, 50% 30%);
+}
+
+.delete-button {
+    height: 54px;
+    width: 54px;
+    display: grid;
+    place-items: center;
+    border: none;
+
+    &:hover .cross-icon {
+        background-color: red;
+    }
+
+    &:active {
+        transform: translate(2px, 2px);
+    }
+
+    &:focus {
+        outline: 2px #254971 solid;
+    }
+}

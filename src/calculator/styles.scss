@@ -1,0 +1,34 @@
+.form {
+    padding: 80px;
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 8px;
+}
+
+.main-settings {
+    grid-column: span 2;
+    display: grid;
+    padding-right: 128px;
+    padding-left: 32px;
+}
+
+.addParty {
+    border: 1px solid #2d8b92;
+    color: #2d8b92;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-weight: bold;
+
+    &:focus {
+        outline: 2px #254971 solid;
+    }
+
+    &:hover {
+        background-color: rgba(#84b5a2, 0.2);
+    }
+
+    &:active {
+        transform: translate(2px, 2px);
+    }
+}
