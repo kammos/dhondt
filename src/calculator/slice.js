@@ -30,7 +30,7 @@ const slice = createSlice({
             state.resultsValid = false;
         },
         removeParty(state, action) {
-            delete state[action.payload];
+            delete state.parties[action.payload];
         },
         setVotes: {
             prepare(partyIndex, votes) {
