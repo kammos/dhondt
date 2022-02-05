@@ -23,7 +23,8 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",
         "react/react-in-jsx-scope": 0,
         "react/prop-types": 0,
-        "react/no-unknown-property": [1, { ignore: ["class"] }]
+        "react/no-unknown-property": [1, { ignore: ["class"] }],
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }]
     },
     "overrides": [{
         "files": [
