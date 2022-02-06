@@ -1,7 +1,9 @@
+@use "../breakpoints";
+
 .form {
     padding: 80px;
     display: grid;
-    grid-template: 1fr 1fr/1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
     gap: 8px;
 }
@@ -13,7 +15,18 @@
     padding-left: 32px;
 }
 
-.addParty {
+@media (max-width: breakpoints.$lg) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .main-settings {
+        grid-column: span 1;
+        padding: 0;
+    }
+}
+
+.add-party {
     border: 1px solid #2d8b92;
     color: #2d8b92;
     font-size: 1.5rem;
