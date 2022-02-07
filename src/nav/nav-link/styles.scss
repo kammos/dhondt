@@ -1,0 +1,26 @@
+@use "../../palette";
+@use "../../breakpoints";
+
+.link {
+    font-size: 1.5rem;
+    color: palette.$neutral050;
+    z-index: 2;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        cursor: default;
+    }
+
+    &.inactive:hover {
+        background-color: palette.$primary800;
+    }
+}
+
+@media (max-width: breakpoints.$lg) {
+    .link {
+        flex-grow: 1;
+    }
+}

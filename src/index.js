@@ -8,6 +8,7 @@ import './styles.scss';
 
 import { calculatorActions, calculatorReducer } from './calculator';
 import { Shell } from './shell';
+import { PreloadController } from './preload-controller';
 
 const store = configureStore({ 
     reducer: {
@@ -22,6 +23,8 @@ store.dispatch(calculatorActions.addParty());
 
 render(
     <Provider store={store}>
-        <Shell />
+        <PreloadController>
+            <Shell />
+        </PreloadController>
     </Provider>, 
 document.querySelector('#root'));

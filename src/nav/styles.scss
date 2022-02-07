@@ -1,0 +1,25 @@
+@use "../palette";
+@use "../breakpoints";
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0px 8px;
+    background-color: palette.$primary700;
+}
+
+@media (max-width: breakpoints.$lg) {
+    .nav {
+        flex-grow: 1;
+    }
+}
+
+.shadow {
+    height: 100%;
+    position: absolute;
+    background-color: palette.$primary900;
+    transition: 
+        left 0.2s ease-in-out, 
+        width 0.1s ease-in; // if both transitions are the same length it looks weird
+}

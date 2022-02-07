@@ -1,5 +1,6 @@
-import { Link, Redirect, Route, Switch } from "wouter";
+import { Redirect, Route, Switch } from "wouter";
 import { Calculator } from "../calculator";
+import { Nav } from "../nav";
 import { Results } from "../results";
 import s from "./styles.scss";
 
@@ -7,18 +8,10 @@ import s from "./styles.scss";
 export const Shell = () => {
     return <div className={s.shell}>
         <header className={s.titleBar}>
-            <span>D&apos;Hondt calculator</span>
-            <nav className={s.nav}>
-                <Link href="/setup" className={s.navLink}>
-                    Data
-                </Link>
-                <Link href="/results" className={s.navLink}>
-                    Results
-                </Link>
-                <Link href="/about" className={s.navLink}>
-                    About
-                </Link>
-            </nav>
+            <span className={s.title}>D&apos;Hondt calculator</span>
+            <div className={s.navContainer}>
+                <Nav />
+            </div>
         </header>
         <main className={s.main}>
             <Switch>
