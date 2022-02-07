@@ -4,9 +4,10 @@ import { render } from 'react-dom';
 import { configureStore } from "@reduxjs/toolkit"
 import { Provider } from 'react-redux';
 
-import s from './styles.scss';
+import './styles.scss';
 
-import { calculatorReducer } from './calculator';
+import { calculatorActions, calculatorReducer } from './calculator';
+import { Shell } from './shell';
 
 const store = configureStore({ 
     reducer: {
@@ -14,8 +15,13 @@ const store = configureStore({
     }
 });
 
+store.dispatch(calculatorActions.addParty());
+store.dispatch(calculatorActions.addParty());
+store.dispatch(calculatorActions.addParty());
+store.dispatch(calculatorActions.addParty());
+
 render(
     <Provider store={store}>
-        <p class={s.mainMain}>hello</p>
+        <Shell />
     </Provider>, 
 document.querySelector('#root'));
