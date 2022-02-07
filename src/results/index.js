@@ -44,8 +44,8 @@ const options2 = {
 };
 
 
-export const Results = ({ inViewport }) => {
-    useUpdateResults(inViewport);
+export const Results = () => {
+    useUpdateResults();
     const results = useSelector(state => state.calculator.results);
     const parties = Object.values(results).sort((partyA, partyB) => partyB.votes - partyA.votes);
 
