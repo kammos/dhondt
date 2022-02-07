@@ -31,6 +31,7 @@ const options = {
         datalabels: { color: '#FFF' }
     },
     responsive: true,
+    maintainAspectRatio: false,
 };
 
 const options2 = {
@@ -40,6 +41,7 @@ const options2 = {
         datalabels: { color: '#FFF', formatter: n => n.toFixed(2) },
     },
     responsive: true,
+    maintainAspectRatio: false,
     indexAxis: 'y'
 };
 

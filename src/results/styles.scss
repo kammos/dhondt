@@ -1,3 +1,5 @@
+@use "../breakpoints";
+
 .container {
     background: white;
     box-shadow: 0px 0px 2px 0px rgba(66, 68, 90, 1);
@@ -5,4 +7,16 @@
     border-radius: 6px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.chart-container {
+    position: relative;
+    min-width: 0;
+    min-height: 45vh;
+}
+
+@media (max-width: breakpoints.$lg) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
