@@ -36,5 +36,11 @@ export const calculateSeats = (parties, seatsToAssign, tresholdPercentage) => {
         seatsAssigned += 1;
     }
 
+    for (const [index, party] of Object.entries(parties)) {
+        const expectedSeats = seatsToAssign * (party.votes/votesTotal);
+
+        result[index].difference = result[index].seats - expectedSeats;
+    }
+
     return result;
 }
