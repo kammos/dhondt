@@ -1,2 +1,2 @@
 export *  from './slice';
-export * from './component';
+export * from './calculator-component';

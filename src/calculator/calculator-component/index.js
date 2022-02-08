@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { calculatorActions } from ".";
-import { Fieldset } from "../fieldset";
-import { MainSettings } from "../main-settings";
-import { Party } from "../party";
+import { calculatorActions } from "..";
+import { Fieldset } from "../../fieldset";
+import { MainSettings } from "../../main-settings";
+import { Party } from "../../party";
 import s from "./styles.scss";
 
 export const Calculator = () => {
