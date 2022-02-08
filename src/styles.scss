@@ -1,3 +1,5 @@
+@use "sys";
+
 body {
-    background-color: #F1EAD1;
+    background-color: sys.$neutral050;
 }
