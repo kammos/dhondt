@@ -4,11 +4,11 @@
     position: sticky;
     top: 0;
     background-color: sys.$primary900;
-    font-size: 2rem;
+    color: sys.$neutral000;
+    font-size: sys.$large-text;
     font-weight: bold;
-    color: white;
-    padding: 0 1rem;
-    height: 5rem;
+    padding: 0 sys.$w16;
+    height: sys.$w64;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -25,6 +25,11 @@
     align-items: stretch;
 }
 
+.main {
+    max-width: sys.$w960;
+    margin: sys.$w64 auto;
+}
+
 @media (max-width: sys.$lg) {
     .title {
         display: none;
@@ -37,8 +42,8 @@
     .nav-container {
         flex-grow: 1;
     }
-}
 
-.main {
-    padding: 20px min(80px, 5vw);
+    .main {
+        margin: sys.$w64 sys.$w32;
+    }
 }
