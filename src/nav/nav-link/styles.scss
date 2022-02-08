@@ -12,10 +12,12 @@
 
     &.active {
         cursor: default;
+        color: palette.$secondary200;
     }
 
     &.inactive:hover {
         background-color: palette.$primary800;
+        color: palette.$secondary200;
     }
 }
 
