@@ -1,4 +1,4 @@
-@use "../breakpoints";
+@use "../sys";
 
 .container {
     background: white;
@@ -15,7 +15,7 @@
     min-height: 45vh;
 }
 
-@media (max-width: breakpoints.$lg) {
+@media (max-width: sys.$lg) {
     .container {
         grid-template-columns: 1fr;
     }

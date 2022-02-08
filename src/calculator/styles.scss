@@ -1,4 +1,4 @@
-@use "../breakpoints";
+@use "../sys";
 
 .form {
     display: grid;
@@ -14,7 +14,7 @@
     padding-left: 32px;
 }
 
-@media (max-width: breakpoints.$lg) {
+@media (max-width: sys.$lg) {
     .form {
         grid-template-columns: 1fr;
     }

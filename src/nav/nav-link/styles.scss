@@ -1,9 +1,8 @@
-@use "../../palette";
-@use "../../breakpoints";
+@use "../../sys";
 
 .link {
     font-size: 1.5rem;
-    color: palette.$neutral050;
+    color: sys.$neutral050;
     z-index: 2;
     padding: 0px 16px;
     display: flex;
@@ -12,16 +11,16 @@
 
     &.active {
         cursor: default;
-        color: palette.$secondary200;
+        color: sys.$secondary200;
     }
 
     &.inactive:hover {
-        background-color: palette.$primary800;
-        color: palette.$secondary200;
+        background-color: sys.$primary800;
+        color: sys.$secondary200;
     }
 }
 
-@media (max-width: breakpoints.$lg) {
+@media (max-width: sys.$lg) {
     .link {
         flex-grow: 1;
     }

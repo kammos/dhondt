@@ -1,10 +1,9 @@
-@use "../palette";
-@use "../breakpoints";
+@use "../sys";
 
 .title-bar {
     position: sticky;
     top: 0;
-    background-color: palette.$primary900;
+    background-color: sys.$primary900;
     font-size: 2rem;
     font-weight: bold;
     color: white;
@@ -26,7 +25,7 @@
     align-items: stretch;
 }
 
-@media (max-width: breakpoints.$lg) {
+@media (max-width: sys.$lg) {
     .title {
         display: none;
     }
