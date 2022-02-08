@@ -1,46 +1,48 @@
 @use "../../sys";
 
 .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: sys.$w64;
 }
 
 .main-settings {
-    grid-column: span 2;
     display: grid;
-    padding-right: 128px;
-    padding-left: 32px;
+    place-items: center;
 }
 
-@media (max-width: sys.$lg) {
-    .form {
-        grid-template-columns: 1fr;
-    }
-
-    .main-settings {
-        grid-column: span 1;
-        padding: 0;
-    }
+.parties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: sys.$w32;
 }
 
 .add-party {
-    border: 1px solid #2d8b92;
-    color: #2d8b92;
-    font-size: 1.5rem;
-    font-style: bold;
+    border: 1px solid sys.$primary500;
+    color: sys.$primary500;
+    font-size: sys.$mid-text;
     font-weight: bold;
 
     &:focus {
-        outline: 2px #254971 solid;
+        outline: 2px sys.$primary900 solid;
     }
 
     &:hover {
-        background-color: rgba(#84b5a2, 0.2);
+        background-color: sys.$primary100;
     }
 
     &:active {
         transform: translate(2px, 2px);
+    }
+}
+
+@media (max-width: sys.$lg) {
+    .parties {
+        grid-template-columns: 1fr;
+    }
+
+    .main-settings {
+        place-items: stretch;
     }
 }

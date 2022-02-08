@@ -19,11 +19,13 @@ export const Calculator = () => {
         <div className={s.mainSettings}>
             <MainSettings />
         </div>
-        {Object.values(parties).map(party => <Party key={party.index} party={party} />)}
-        <Fieldset color={nextIndex}>
-            <button type="button" className={s.addParty} onClick={handleAddPartyClick}>
-                New party
-            </button>
-        </Fieldset>
+        <div className={s.parties}>
+            {Object.values(parties).map(party => <Party key={party.index} party={party} />)}
+            <Fieldset color={nextIndex}>
+                <button type="button" className={s.addParty} onClick={handleAddPartyClick}>
+                    New party
+                </button>
+            </Fieldset>
+        </div>
     </form>
 }
