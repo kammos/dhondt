@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
+    box-shadow: sys.$shadow-inset;
     cursor: text;
 
     &:focus-within {
