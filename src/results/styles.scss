@@ -14,8 +14,19 @@
     min-width: 0;
 }
 
+.explanation-container {
+    grid-column: span 2;
+    display: grid;
+    place-items: center;
+    min-width: 0;
+}
+
 @media (max-width: sys.$lg) {
     .container {
         grid-template-columns: 1fr;
+    }
+
+    .explanation-container {
+        grid-column: span 1;
     }
 }

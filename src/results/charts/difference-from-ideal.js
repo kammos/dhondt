@@ -1,19 +1,12 @@
 import { Bar } from "react-chartjs-2";
+import { seatsFormatter } from "../../misc/seats-formatter";
 import { neutral, plus, minus } from "../../_sys.scss";
 import { font } from "./_helpers";
-
-const formatter = seats => {
-    if (seats === 0) {
-        return "No seats gained/lost";
-    } else {
-        return `${Math.abs(seats).toFixed(2)} seats ${seats > 0 ? 'gained' : 'lost'}`
-    }
-}
 
 const options = {
     plugins: {
         title: { text: 'Difference from ideal number of seats', display: true, font: { weight: 'bold', size: 16 } },
-        datalabels: { color: neutral, formatter: formatter, font: font},
+        datalabels: { color: neutral, formatter: seatsFormatter, font: font},
     },
     responsive: true,
     maintainAspectRatio: true,

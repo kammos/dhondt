@@ -2,6 +2,7 @@ import { useUpdateResults } from "./use-update-results";
 import { useSelector } from "react-redux";
 import { DifferenceFromIdeal, SeatsPerParty } from "./charts";
 import s from "./styles.scss";
+import { Explanation } from "./explanation";
 
 export const Results = () => {
     useUpdateResults();
@@ -14,6 +15,9 @@ export const Results = () => {
         </div>
         <div className={s.chartContainer}>
             <DifferenceFromIdeal parties={parties} />
+        </div>
+        <div className={s.explanationContainer}>
+            <Explanation parties={parties} />
         </div>
     </div>
 }

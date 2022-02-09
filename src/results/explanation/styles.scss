@@ -1,0 +1,19 @@
+@use "../../sys";
+
+.container {
+    max-width: sys.$w640;
+    color: sys.$neutral900;
+
+    header {
+        font-size: sys.$mid-text;
+        font-weight: bold;
+    }
+
+    p {
+        padding: sys.$w8 0px;
+    }
+
+    .text {
+        text-align: justify;
+    }
+}
