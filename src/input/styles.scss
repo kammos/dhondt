@@ -1,8 +1,9 @@
+@use "../sys";
+
 .label {
     outline: none;
-    border: 1px solid #2d8b92;
-    border-radius: 2px;
-    padding: 8px;
+    background-color: sys.$primary050;
+    padding: sys.$w8;
     transition: all 0.2s;
     outline: 2px transparent solid;
     display: inline-flex;
@@ -12,13 +13,12 @@
     cursor: text;
 
     &:focus-within {
-        border-color: #254971;
-        outline: 2px #254971 solid;
-        background-color: rgba(#84b5a2, 0.2);
+        outline: 2px sys.$primary900 solid;
+        background-color: sys.$secondary200;
     }
 
     &:hover {
-        background-color: rgba(#84b5a2, 0.2);
+        background-color: sys.$secondary100;
     }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .labelText {
-    color: #2d8b92;
+    color: sys.$primary600;
     white-space: nowrap;
 }
 
@@ -36,10 +36,10 @@
     outline: none;
     background: transparent;
     text-align: right;
-    color: #254971 !important;
-    font-size: 1.5em;
+    color: sys.$primary900 !important;
+    font-size: sys.$mid-text;
     font-weight: bold;
-    margin-left: 8px;
+    margin-left: sys.$w8;
     min-width: 0px;
     /* so that autofill in Chrome doesn't ruin colors */
     -webkit-background-clip: text;
@@ -61,21 +61,20 @@
     background-color: transparent;
     margin: 0;
 
-    width: 1.5em;
-    height: 1.5em;
-    border: 4px solid #2d8b92;
-    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    border: 4px solid sys.$primary900;
 
     display: grid;
     place-content: center;
 
     &::before {
         content: "";
-        width: 0.8em;
-        height: 0.8em;
+        width: 20px;
+        height: 20px;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
-        background-color: #2d8b92;
+        background-color: sys.$primary900;
     }
 
     &:checked::before {
