@@ -9,17 +9,21 @@ import './styles.scss';
 import { calculatorActions, calculatorReducer } from './calculator';
 import { Shell } from './shell';
 import { PreloadController } from './preload-controller';
+import { retainState } from './state-retention';
 
 const store = configureStore({ 
     reducer: {
         calculator: calculatorReducer
-    }
+    },
+    enhancers: [retainState('state-retention-key')]
 });
 
-store.dispatch(calculatorActions.addParty());
-store.dispatch(calculatorActions.addParty());
-store.dispatch(calculatorActions.addParty());
-store.dispatch(calculatorActions.addParty());
+if (Object.values(store.getState().calculator.parties).length === 0) {
+    store.dispatch(calculatorActions.addParty());
+    store.dispatch(calculatorActions.addParty());
+    store.dispatch(calculatorActions.addParty());
+    store.dispatch(calculatorActions.addParty());
+}
 
 render(
     <Provider store={store}>

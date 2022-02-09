@@ -33,6 +33,9 @@ module.exports = {
         ],
         "env": {
             "jest": true
+        },
+        "globals": {
+            "global": true
         }
     }]
 };
