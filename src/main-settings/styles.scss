@@ -1,5 +1,29 @@
-.container {
+@use "../sys";
+
+.fieldset {
+    border: 0;
+    background-color: sys.$neutral100;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    padding: sys.$w8;
+}
+
+.legend {
+    color: sys.$neutral300;
+    font-weight: bold;
+    font-size: sys.$mid-text;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: minmax(sys.$w384, 1fr);
+    width: sys.$w512;
+    gap: sys.$w8;
+}
+
+@media (max-width: sys.$lg) {
+    .inputs {
+        width: sys.$w384;
+        align-self: center;
+    }
 }

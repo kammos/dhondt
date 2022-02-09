@@ -27,8 +27,14 @@
 }
 
 .main {
-    max-width: sys.$w960;
-    margin: sys.$w64 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    place-items: center;
+    padding: sys.$w64;
+}
+
+.content {
+    max-width: sys.$w1200;
 }
 
 @media (max-width: sys.$lg) {
@@ -45,6 +51,6 @@
     }
 
     .main {
-        margin: sys.$w64 sys.$w32;
+        padding: sys.$w32;
     }
 }

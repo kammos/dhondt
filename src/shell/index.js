@@ -14,20 +14,22 @@ export const Shell = () => {
             </div>
         </header>
         <main className={s.main}>
-            <Switch>
-                <Route path="/about">
-                    the about
-                </Route>
-                <Route path="/setup">
-                    <Calculator />
-                </Route>
-                <Route path="/results">
-                    <Results />
-                </Route>
-                <Route>
-                    <Redirect to="/setup" />
-                </Route>
-            </Switch>
+            <div className={s.content}>
+                <Switch>
+                    <Route path="/about">
+                        the about
+                    </Route>
+                    <Route path="/setup">
+                        <Calculator />
+                    </Route>
+                    <Route path="/results">
+                        <Results />
+                    </Route>
+                    <Route>
+                        <Redirect to="/setup" />
+                    </Route>
+                </Switch>
+            </div>
         </main>
     </div>
 }

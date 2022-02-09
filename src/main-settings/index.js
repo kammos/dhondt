@@ -1,5 +1,4 @@
 import s from "./styles.scss";
-import { Fieldset } from "../fieldset"
 import { Input } from "../input"
 import { useDispatch, useSelector } from "react-redux";
 import { calculatorActions } from "../calculator";
@@ -29,10 +28,18 @@ export const MainSettings = () => {
         }
     }
     
-    return <Fieldset color={80}>
-        <div className={s.container}>
+    // cannot use real fieldset here due to bugs in chrome
+    return <div 
+        role="group" 
+        aria-labelledby="main-settings-label" 
+        className={s.fieldset}
+    >
+        <div className={s.legend} id="main-settings-label">
+            Main settings
+        </div>
+        <div className={s.inputs}>
             <Input name="seats" type="number" value={seats} onChange={handleSeatsChange} onBlur={handleSeatsBlur} />
             <Input name="treshold" type="number" value={treshold} onChange={handleTresholdChange} onBlur={handleTresholdBlur}/>
         </div>
-    </Fieldset>
+    </div>
 }

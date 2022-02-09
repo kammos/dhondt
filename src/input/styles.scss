@@ -15,11 +15,11 @@
 
     &:focus-within {
         outline: 2px sys.$primary900 solid;
-        background-color: sys.$secondary200;
+        background-color: sys.$primary200;
     }
 
     &:hover {
-        background-color: sys.$secondary100;
+        background-color: sys.$primary100;
     }
 }
 
@@ -45,6 +45,7 @@
     /* so that autofill in Chrome doesn't ruin colors */
     -webkit-background-clip: text;
     background-clip: text;
+    caret-color: sys.$primary900;
 }
 
 .input::-webkit-outer-spin-button,

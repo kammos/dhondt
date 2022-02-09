@@ -3,7 +3,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: sys.$w64;
+    gap: sys.$w8;
 }
 
 .main-settings {
@@ -20,9 +20,11 @@
 
 .add-party {
     border: 1px solid sys.$primary500;
+    background-color: sys.$primary050;
     color: sys.$primary500;
     font-size: sys.$mid-text;
     font-weight: bold;
+    box-shadow: sys.$shadow;
 
     &:focus {
         outline: 2px sys.$primary900 solid;
@@ -33,6 +35,7 @@
     }
 
     &:active {
+        background-color: sys.$primary200;
         transform: translate(2px, 2px);
     }
 }
