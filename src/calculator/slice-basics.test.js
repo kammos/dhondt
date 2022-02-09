@@ -16,7 +16,7 @@ describe('calculator', () => {
 
             const newState2 = calculatorReducer(newState, calculatorActions.addParty());
 
-            expect(newState2.parties[1].name).toBe('Blue');
+            expect(newState2.parties[1].name).toBe('Green');
         });
 
         it('should automatically set votes to initial value', () => {

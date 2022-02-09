@@ -18,10 +18,10 @@ describe('calculator', () => {
             const newState = calculatorReducer(initialState, calculatorActions.updateResults());
 
             expect(newState.results).toEqual({
-                0: { name: "A", seats: 4, votes: 100000 },
-                1: { name: "B", seats: 3, votes: 80000 },
-                2: { name: "C", seats: 1, votes: 30000 },
-                3: { name: "D", seats: 0, votes: 20000 },
+                0: { name: "A", seats: 4, votes: 100000, difference: 0.5217391304347827 },
+                1: { name: "B", seats: 3, votes: 80000, difference: 0.21739130434782616 },
+                2: { name: "C", seats: 1, votes: 30000, difference: -0.04347826086956519 },
+                3: { name: "D", seats: 0, votes: 20000, difference: -0.6956521739130435 },
             });
         });
     });
