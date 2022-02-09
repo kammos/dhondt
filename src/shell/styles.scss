@@ -35,6 +35,7 @@
 
 .content {
     max-width: sys.$w1200;
+    min-width: 60vw;
 }
 
 @media (max-width: sys.$lg) {

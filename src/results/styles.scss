@@ -1,18 +1,17 @@
 @use "../sys";
 
 .container {
-    background: white;
-    box-shadow: 0px 0px 2px 0px rgba(66, 68, 90, 1);
-    padding: 20px;
-    border-radius: 6px;
+    background: sys.$neutral000;
+    box-shadow: sys.$shadow;
+    padding: sys.$w24;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: sys.$w24;
 }
 
 .chart-container {
     position: relative;
     min-width: 0;
-    min-height: 45vh;
 }
 
 @media (max-width: sys.$lg) {
