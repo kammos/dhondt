@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { calculateSeats } from "./calculate-seats";
 
-const names = ['Red', 'Blue', 'Green', 'Yellow'];
+const names = ['Red', 'Green', 'Blue', 'Pink', 'Lime', 'Turquise', 'Magenta'];
 
 const initialState = {
-    seats: 460,
+    seats: 100,
     treshold: 0,
     nextIndex: 0,
     parties: {},
@@ -21,7 +21,7 @@ const slice = createSlice({
 
             state.parties[nextIndex] = {
                 name: names[state.nextIndex] ?? `Party ${state.nextIndex}`,
-                votes: 100,
+                votes: 100 + 10 * state.nextIndex,
                 index: state.nextIndex,
                 ignoresTreshold: false,
             };
