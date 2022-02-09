@@ -1,8 +1,8 @@
 import { useUpdateResults } from "./use-update-results";
 import { useSelector } from "react-redux";
 import { DifferenceFromIdeal, SeatsPerParty } from "./charts";
-import s from "./styles.scss";
 import { Explanation } from "./explanation";
+import s from "./styles.scss";
 
 export const Results = () => {
     useUpdateResults();

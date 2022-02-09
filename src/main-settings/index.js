@@ -1,7 +1,7 @@
-import s from "./styles.scss";
 import { Input } from "../input"
 import { useDispatch, useSelector } from "react-redux";
 import { calculatorActions } from "../calculator";
+import s from "./styles.scss";
 
 export const MainSettings = () => {
     const dispatch = useDispatch();

@@ -1,9 +1,8 @@
-import s from "./styles.scss";
 import { Fieldset } from "../fieldset"
 import { Input } from "../input";
 import { useDispatch } from "react-redux";
 import { calculatorActions } from "../calculator";
-
+import s from "./styles.scss";
 
 export const Party = ({party}) => {
     const dispatch = useDispatch();
