@@ -1,15 +1,15 @@
+/* eslint-disable no-restricted-syntax */
 import './reset.scss';
+import './styles.scss';
 
 import { render } from 'react-dom';
 import { configureStore } from "@reduxjs/toolkit"
 import { Provider } from 'react-redux';
-
-import './styles.scss';
-
 import { calculatorActions, calculatorReducer } from './calculator';
 import { Shell } from './shell';
 import { PreloadController } from './preload-controller';
 import { retainState } from './state-retention';
+
 
 const store = configureStore({ 
     reducer: {
