@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should support checkboxes 1`] = `
+<div>
+  <label
+    class="label checkbox"
+  >
+    <span
+      class="labelText"
+    >
+      Input
+      :
+    </span>
+    <input
+      class="input"
+      name="input"
+      type="checkbox"
+      value=""
+    />
+  </label>
+</div>
+`;
+
+exports[`Input component should support number inputs 1`] = `
+<div>
+  <label
+    class="label number"
+  >
+    <span
+      class="labelText"
+    >
+      Input
+      :
+    </span>
+    <input
+      class="input"
+      name="input"
+      type="number"
+      value=""
+    />
+  </label>
+</div>
+`;
+
+exports[`Input component should support text inputs 1`] = `
+<div>
+  <label
+    class="label undefined"
+  >
+    <span
+      class="labelText"
+    >
+      Input
+      :
+    </span>
+    <input
+      class="input"
+      name="input"
+      value="value"
+    />
+  </label>
+</div>
+`;
