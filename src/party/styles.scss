@@ -1,6 +1,8 @@
+@use "../sys";
+
 .container {
     display: grid;
-    gap: 8px;
+    gap: sys.$w8;
     grid-template: 
         minmax(0, 1fr) minmax(0, 1fr)/ 
         minmax(0, 1fr) minmax(0, 1fr);
@@ -9,25 +11,25 @@
 .icons {
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
+    gap: sys.$w8;
 }
 
 .cross-icon {
-    height: 36px;
-    width: 36px;
-    background-color: #84b5a2;
+    height: sys.$w24;
+    width: sys.$w24;
+    background-color: sys.$primary600;
     clip-path: polygon(10% 0%, 0% 10%, 30% 50%, 0% 90%, 10% 100%, 50% 70%, 90% 100%, 100% 90%, 70% 50%, 100% 10%, 90% 0%, 50% 30%);
 }
 
 .delete-button {
-    height: 54px;
-    width: 54px;
+    height: sys.$w48;
+    width: sys.$w48;;
     display: grid;
     place-items: center;
     border: none;
 
     &:hover .cross-icon {
-        background-color: red;
+        background-color: sys.$minus600;
     }
 
     &:active {
@@ -35,6 +37,6 @@
     }
 
     &:focus {
-        outline: 2px #254971 solid;
+        outline: 2px sys.$primary900 solid;
     }
 }
