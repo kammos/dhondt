@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainSettings component should match snapshot 1`] = `
+<div>
+  <div
+    aria-labelledby="main-settings-label"
+    class="fieldset"
+    role="group"
+  >
+    <div
+      class="legend"
+      id="main-settings-label"
+    >
+      Main settings
+    </div>
+    <div
+      class="inputs"
+    >
+      <label
+        class="label number"
+      >
+        <span
+          class="labelText"
+        >
+          Seats
+          :
+        </span>
+        <input
+          class="input"
+          name="seats"
+          type="number"
+          value="100"
+        />
+      </label>
+      <label
+        class="label number"
+      >
+        <span
+          class="labelText"
+        >
+          Treshold
+          :
+        </span>
+        <input
+          class="input"
+          name="treshold"
+          type="number"
+          value="0"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
