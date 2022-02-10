@@ -18,8 +18,23 @@ export const Explanation = ({parties}) => {
         </div>
     }
 
-
     const party = parties.sort(greatestAbsoluteDifferenceFromIdeal)[0];
+
+    if (party.difference === 0) {
+        return <div className={s.container}>
+            <header>
+                Wow, no party lost or gained any seats!
+            </header>
+            <div className={s.text}>
+                <p>
+                    Sadly, this is a rare occurence with the D&apos;Hondt method. 
+                </p>
+                <p>
+                    Try changing number votes received by each party even just a little.
+                </p>
+            </div>
+        </div>
+    }
 
     return <div className={s.container}>
         <header>

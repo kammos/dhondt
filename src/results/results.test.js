@@ -81,4 +81,34 @@ describe("Results component", () => {
 
         expect(ui.container).toMatchSnapshot();
     });
+
+    it("should render a proper message if no party lost or gained any seats", () => {
+        const initialState = {
+            calculator: {
+                resultsValid: true,
+                results: {
+                    '0': {
+                        name: 'Red',
+                        votes: 100,
+                        index: 0,
+                        ignoresTreshold: false,
+                        seats: 22,
+                        difference: 0.0
+                    },
+                    '1': {
+                        name: 'Green',
+                        votes: 110,
+                        index: 1,
+                        ignoresTreshold: false,
+                        seats: 24,
+                        difference: 0.0
+                    }
+                }
+            }
+        };
+
+        const ui = render(<Results />, { initialState });
+
+        expect(ui.container).toMatchSnapshot();
+    });
 });

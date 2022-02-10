@@ -61,6 +61,50 @@ exports[`Results component should render 1`] = `
 </div>
 `;
 
+exports[`Results component should render a proper message if no party lost or gained any seats 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="chartContainer"
+    >
+      <chartjs-bar>
+        {"options":{"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[24,22],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}}
+      </chartjs-bar>
+    </div>
+    <div
+      class="chartContainer"
+    >
+      <chartjs-bar>
+        {"options":{"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[0,0],"backgroundColor":["minus","minus"]}]}}
+      </chartjs-bar>
+    </div>
+    <div
+      class="explanationContainer"
+    >
+      <div
+        class="container"
+      >
+        <header>
+          Wow, no party lost or gained any seats!
+        </header>
+        <div
+          class="text"
+        >
+          <p>
+            Sadly, this is a rare occurence with the D'Hondt method.
+          </p>
+          <p>
+            Try changing number votes received by each party even just a little.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Results component should render a proper message if there are no parties in store 1`] = `
 <div>
   <div
