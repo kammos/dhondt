@@ -1,10 +1,25 @@
 {
-    "presets": [
-        ["@babel/preset-react", {
-            "runtime": "automatic"
-        }],
-        ["@babel/preset-env", {
-            "exclude": ["@babel/plugin-transform-regenerator"]
-        }]
-    ]
+    "env": {
+        "dev": {
+            "presets": [
+                ["@babel/preset-react", {
+                    "runtime": "automatic"
+                }],
+                ["@babel/preset-env", {
+                    "exclude": ["@babel/plugin-transform-regenerator"]
+                }]
+            ],
+            "plugins": ["react-refresh/babel"]
+        },
+        "test": {
+            "presets": [
+                ["@babel/preset-react", {
+                    "runtime": "automatic"
+                }],
+                ["@babel/preset-env", {
+                    "exclude": ["@babel/plugin-transform-regenerator"]
+                }]
+            ]
+        }
+    }
 }

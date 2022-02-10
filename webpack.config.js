@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
     devtool: 'eval',
@@ -38,5 +39,7 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-    }
+        hot: true,
+    },
+    plugins: [new ReactRefreshWebpackPlugin()],
 };
