@@ -1,7 +1,7 @@
 import { Bar } from "react-chartjs-2";
 import { seatsFormatter } from "../../misc/seats-formatter";
-import { neutral, plus, minus } from "../../_sys.scss";
 import { font } from "./_helpers";
+import { neutral, plus, minus } from "../../_sys.scss";
 
 const options = {
     plugins: {

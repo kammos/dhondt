@@ -1,7 +1,7 @@
 import { Bar } from "react-chartjs-2";
-import { neutral } from "../../_sys.scss";
 import { getColorByIndex } from "../../misc";
 import { font } from "./_helpers";
+import { neutral } from "../../_sys.scss";
 
 
 export const SeatsPerParty = ({parties}) => {
