@@ -14,6 +14,7 @@ exports[`Input component should support checkboxes 1`] = `
     <input
       class="input"
       name="input"
+      readonly=""
       type="checkbox"
       value=""
     />
@@ -35,6 +36,7 @@ exports[`Input component should support number inputs 1`] = `
     <input
       class="input"
       name="input"
+      readonly=""
       type="number"
       value=""
     />
@@ -56,6 +58,7 @@ exports[`Input component should support text inputs 1`] = `
     <input
       class="input"
       name="input"
+      readonly=""
       value="value"
     />
   </label>
