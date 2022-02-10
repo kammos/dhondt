@@ -6,6 +6,9 @@ const greatestAbsoluteDifferenceFromIdeal = (partyA, partyB) => Math.abs(partyB.
 export const Explanation = ({parties}) => {
     const party = parties.sort(greatestAbsoluteDifferenceFromIdeal)[0];
 
+    if (!party)
+        return null;
+
     return <div className={s.container}>
         <header>
             Seems low?

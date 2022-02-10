@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results component should render 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="chartContainer"
+    >
+      <chartjs-bar>
+        {"options":{"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[24,22],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}}
+      </chartjs-bar>
+    </div>
+    <div
+      class="chartContainer"
+    >
+      <chartjs-bar>
+        {"options":{"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[0.08695652173912904,0.2608695652173907],"backgroundColor":["plus","plus"]}]}}
+      </chartjs-bar>
+    </div>
+    <div
+      class="explanationContainer"
+    >
+      <div
+        class="container"
+      >
+        <header>
+          Seems low?
+        </header>
+        <div
+          class="text"
+        >
+          <p>
+            Remember, this simulator only shows resuls for a 
+            <em>
+              single voting district
+            </em>
+            . In a real-world election, typically there will be multiple districts, allowing such discrepancies to accumulate.
+          </p>
+          <p>
+            As an example, in the above simulation for a single district, party 
+            Red
+             
+            <strong>
+              gained 0.26 seats
+            </strong>
+            .
+          </p>
+          <p>
+            In a country with 40 voting districts, this would translate to 
+            <strong>
+              10 seats gained
+            </strong>
+             nationwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Results component should render even if there are no results preloaded by state retention 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="chartContainer"
+    >
+      <chartjs-bar>
+        {"options":{"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[52,48],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}}
+      </chartjs-bar>
+    </div>
+    <div
+      class="chartContainer"
+    >
+      <chartjs-bar>
+        {"options":{"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[-0.3809523809523867,0.3809523809523867],"backgroundColor":["minus","plus"]}]}}
+      </chartjs-bar>
+    </div>
+    <div
+      class="explanationContainer"
+    >
+      <div
+        class="container"
+      >
+        <header>
+          Seems low?
+        </header>
+        <div
+          class="text"
+        >
+          <p>
+            Remember, this simulator only shows resuls for a 
+            <em>
+              single voting district
+            </em>
+            . In a real-world election, typically there will be multiple districts, allowing such discrepancies to accumulate.
+          </p>
+          <p>
+            As an example, in the above simulation for a single district, party 
+            Green
+             
+            <strong>
+              lost 0.38 seats
+            </strong>
+            .
+          </p>
+          <p>
+            In a country with 40 voting districts, this would translate to 
+            <strong>
+              15 seats lost
+            </strong>
+             nationwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
