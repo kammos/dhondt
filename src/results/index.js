@@ -21,3 +21,5 @@ export const Results = () => {
         </div>
     </div>
 }
+
+export default Results;

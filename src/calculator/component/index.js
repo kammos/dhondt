@@ -29,3 +29,5 @@ export const Calculator = () => {
         </div>
     </form>
 }
+
+export default Calculator;

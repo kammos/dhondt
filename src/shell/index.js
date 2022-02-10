@@ -1,9 +1,10 @@
+import { lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "wouter";
-import { Calculator } from "../calculator";
 import { Nav } from "../nav";
-import { Results } from "../results";
 import s from "./styles.scss";
 
+const Results = lazy(() => import("../results"));
+const Calculator = lazy(() => import("../calculator/component"));
 
 export const Shell = () => {
     return <div className={s.shell}>
@@ -15,20 +16,22 @@ export const Shell = () => {
         </header>
         <main className={s.main}>
             <div className={s.content}>
-                <Switch>
-                    <Route path="/about">
-                        the about
-                    </Route>
-                    <Route path="/setup">
-                        <Calculator />
-                    </Route>
-                    <Route path="/results">
-                        <Results />
-                    </Route>
-                    <Route>
-                        <Redirect to="/setup" />
-                    </Route>
-                </Switch>
+                <Suspense fallback="fallback">
+                    <Switch>
+                        <Route path="/about">
+                            the about
+                        </Route>
+                        <Route path="/setup">
+                            <Calculator />
+                        </Route>
+                        <Route path="/results">
+                            <Results />
+                        </Route>
+                        <Route>
+                            <Redirect to="/setup" />
+                        </Route>
+                    </Switch>
+                </Suspense>
             </div>
         </main>
     </div>
