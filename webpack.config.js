@@ -1,8 +1,19 @@
 const webpack = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'eval',
+    mode: 'development',
+    output: {
+        publicPath: '/'
+    },
+    plugins: [
+        new ReactRefreshWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "src/index.html"
+        })
+    ],
     module: {
         rules: [
             {
@@ -40,6 +51,5 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         hot: true,
-    },
-    plugins: [new ReactRefreshWebpackPlugin()],
+    }
 };

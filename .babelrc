@@ -1,6 +1,6 @@
 {
     "env": {
-        "dev": {
+        "development": {
             "presets": [
                 ["@babel/preset-react", {
                     "runtime": "automatic"
