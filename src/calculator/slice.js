@@ -31,6 +31,7 @@ const slice = createSlice({
         },
         removeParty(state, action) {
             delete state.parties[action.payload];
+            state.resultsValid = false;
         },
         setVotes: {
             prepare(partyIndex, votes) {

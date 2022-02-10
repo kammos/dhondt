@@ -32,6 +32,32 @@ describe('calculator', () => {
         });
     });
 
+    describe('remove party action', () => {
+        const initialState = {
+            seats: 460,
+            nextIndex: 0,
+            parties: {
+                0: {
+                    index: 0,
+                    name: 'delete me',
+                }
+            },
+            resultsValid: true,
+        };
+
+        it('should delete a party', () => {
+            const newState = calculatorReducer(initialState, calculatorActions.removeParty(0));
+
+            expect(newState.parties[0]).toBe(undefined);
+        });
+
+        it('should invalidate results', () => {
+            const newState = calculatorReducer(initialState, calculatorActions.removeParty(0));
+
+            expect(newState.resultsValid).toBe(false);
+        });
+    })
+
     describe('set votes action', () => {
         const initialState = {
             seats: 460,
