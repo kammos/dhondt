@@ -13,7 +13,7 @@ export const Explanation = ({parties}) => {
         <header>
             Seems low?
         </header>
-        <div class={s.text}>
+        <div className={s.text}>
             <p>
                 Remember, this simulator only shows resuls for a <em>single voting district</em>. 
                 In a real-world election, typically there will be multiple districts, allowing such discrepancies to accumulate.
