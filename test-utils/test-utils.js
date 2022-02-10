@@ -8,6 +8,7 @@ import { calculatorReducer } from '../src/calculator';
 const customRender = (ui, { initialState, store, ...options } = {}) => {
     const actualStore = store ?? configureStore({
         reducer: { calculator: calculatorReducer },
+        preloadedState: initialState,
     });
 
     const Wrapper = ({ children }) => {
