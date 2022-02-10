@@ -64,4 +64,21 @@ describe("Results component", () => {
 
         expect(ui.container).toMatchSnapshot();
     });
-})
+
+    it("should render a proper message if there are no parties in store", () => {
+        const initialState = {
+            calculator: {
+                seats: 100,
+                treshold: 0,
+                nextIndex: 4,
+                parties: {},
+                resultsValid: false,
+                results: {}
+            }
+        };
+
+        const ui = render(<Results />, { initialState });
+
+        expect(ui.container).toMatchSnapshot();
+    });
+});

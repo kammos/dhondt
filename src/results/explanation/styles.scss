@@ -16,4 +16,14 @@
     .text {
         text-align: justify;
     }
+
+    .link {
+        color: sys.$secondary600;
+        font-weight: bold;
+        text-decoration: underline;
+
+        &:hover {
+            color: sys.$secondary400;
+        }
+    }
 }

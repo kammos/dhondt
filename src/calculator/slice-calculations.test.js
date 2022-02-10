@@ -24,5 +24,17 @@ describe('calculator', () => {
                 3: { name: "D", seats: 0, votes: 20000, difference: -0.6956521739130435 },
             });
         });
+
+        it('should not fail at zero parties', () => {
+            const initialState = {
+                seats: 8,
+                resultsValid: false,
+                parties: {},
+            }
+
+            const newState = calculatorReducer(initialState, calculatorActions.updateResults());
+            expect(newState.results).toEqual({});
+            expect(newState.resultsValid).toBe(true);
+        });
     });
 });

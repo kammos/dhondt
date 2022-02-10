@@ -8,14 +8,17 @@ export const Results = () => {
     useUpdateResults();
     const results = useSelector(state => state.calculator.results);
     const parties = Object.values(results).sort((partyA, partyB) => partyB.votes - partyA.votes);
+    const hasAnyParties = parties.length !== 0;
 
     return <div className={s.container}>
-        <div className={s.chartContainer}>
-            <SeatsPerParty parties={parties} />
-        </div>
-        <div className={s.chartContainer}>
-            <DifferenceFromIdeal parties={parties} />
-        </div>
+        {hasAnyParties && <>
+            <div className={s.chartContainer}>
+                <SeatsPerParty parties={parties} />
+            </div>
+            <div className={s.chartContainer}>
+                <DifferenceFromIdeal parties={parties} />
+            </div>
+        </>}
         <div className={s.explanationContainer}>
             <Explanation parties={parties} />
         </div>

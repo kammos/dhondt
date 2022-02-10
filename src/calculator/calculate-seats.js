@@ -1,5 +1,9 @@
 
 export const calculateSeats = (parties, seatsToAssign, tresholdPercentage) => {
+    if (Object.entries(parties).length === 0) {
+        return {};
+    }
+    
     const result = {};
     const quotients = {};
     let votesTotal = 0;

@@ -1,13 +1,25 @@
+import { Link } from "wouter";
 import { seatsFormatter, seatsFormatterReversed } from "../../misc";
 import s from "./styles.scss";
 
 const greatestAbsoluteDifferenceFromIdeal = (partyA, partyB) => Math.abs(partyB.difference) - Math.abs(partyA.difference);
 
 export const Explanation = ({parties}) => {
-    const party = parties.sort(greatestAbsoluteDifferenceFromIdeal)[0];
+    if (parties.length === 0) {
+        return <div className={s.container}>
+            <header>
+                It seems that you didn&apos;t enter any parties
+            </header>
+            <div className={s.text}>
+                <p>
+                    To see election results, please go back to the <Link href="/setyp" className={s.link}>Enter data</Link> tab and fill in at least one party.
+                </p>
+            </div>
+        </div>
+    }
 
-    if (!party)
-        return null;
+
+    const party = parties.sort(greatestAbsoluteDifferenceFromIdeal)[0];
 
     return <div className={s.container}>
         <header>

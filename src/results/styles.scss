@@ -19,6 +19,7 @@
     display: grid;
     place-items: center;
     min-width: 0;
+    min-height: 200px;
 }
 
 @media (max-width: sys.$lg) {

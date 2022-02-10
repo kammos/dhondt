@@ -61,6 +61,40 @@ exports[`Results component should render 1`] = `
 </div>
 `;
 
+exports[`Results component should render a proper message if there are no parties in store 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="explanationContainer"
+    >
+      <div
+        class="container"
+      >
+        <header>
+          It seems that you didn't enter any parties
+        </header>
+        <div
+          class="text"
+        >
+          <p>
+            To see election results, please go back to the 
+            <a
+              class="link"
+              href="/setyp"
+            >
+              Enter data
+            </a>
+             tab and fill in at least one party.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Results component should render even if there are no results preloaded by state retention 1`] = `
 <div>
   <div
