@@ -20,6 +20,16 @@
                     "exclude": ["@babel/plugin-transform-regenerator"]
                 }]
             ]
+        },
+        "production": {
+            "presets": [
+                ["@babel/preset-react", {
+                    "runtime": "automatic"
+                }],
+                ["@babel/preset-env", {
+                    "exclude": ["@babel/plugin-transform-regenerator"]
+                }]
+            ]
         }
     }
 }
