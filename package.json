@@ -1,10 +1,11 @@
 {
-  "name": "preact-template",
-  "version": "1.0.0",
+  "name": "d-hondt-calculator-online",
+  "version": "0.0.420",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
@@ -48,6 +49,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
-    "react-refresh": "^0.11.0"
+    "react-refresh": "^0.11.0",
+    "webpack-merge": "^5.8.0"
   }
 }
