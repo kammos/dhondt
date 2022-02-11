@@ -6,7 +6,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "src/index.html"
+            template: `src/index.${process.env.NODE_ENV}.html`
         })
     ],
     module: {
