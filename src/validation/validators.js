@@ -3,22 +3,22 @@ import { validated } from "./validated";
 
 
 export const notEmpty = 
-    validator(value => value != null && value !== '' && !Number.isNaN(value), "Can not be empty");
+    validator(value => value != null && value !== '' && !Number.isNaN(value), "can not be empty");
 
 export const moreThan = 
-    parametrizedValidator((value, target) => value > target, target => `Needs to be more than ${target}`);
+    parametrizedValidator((value, target) => value > target, target => `more than ${target}`);
 
 export const lessThan = 
-    parametrizedValidator((value, target) => value < target, target => `Needs to be less than ${target}`);
+    parametrizedValidator((value, target) => value < target, target => `less than ${target}`);
 
 export const atLeast = 
-    parametrizedValidator((value, target) => value >= target, target => `Needs to be at least ${target}`);
+    parametrizedValidator((value, target) => value >= target, target => `at least ${target}`);
 
 export const atMost = 
-    parametrizedValidator((value, target) => value <= target, target => `Nees to be at most ${target}`);
+    parametrizedValidator((value, target) => value <= target, target => `at most ${target}`);
 
 export const isInteger = 
-    validator(value => (Number.isInteger(value) && value >= 0) || (typeof value == "string" && value.match(/^\d+$/)), "Needs to be integer");
+    validator(value => (Number.isInteger(value) && value >= 0) || (typeof value == "string" && value.match(/^\d+$/)), "integers only");
 
 
 

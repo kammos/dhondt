@@ -21,6 +21,11 @@
     clip-path: polygon(10% 0%, 0% 10%, 30% 50%, 0% 90%, 10% 100%, 50% 70%, 90% 100%, 100% 90%, 70% 50%, 100% 10%, 90% 0%, 50% 30%);
 }
 
+.input {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
 .delete-button {
     height: sys.$w48;
     width: sys.$w48;;
@@ -38,5 +43,19 @@
 
     &:focus {
         outline: 2px sys.$primary900 solid;
+    }
+}
+
+@media (max-width: sys.$lg) {
+    .container {
+        grid-template: minmax(0, 1fr) 52px / 1fr;
+    }
+
+    .input {
+        grid-column: 1;
+    }
+
+    .icons {
+        grid-column: 2;
     }
 }

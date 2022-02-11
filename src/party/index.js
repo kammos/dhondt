@@ -25,14 +25,20 @@ export const Party = ({party}) => {
 
     return <Fieldset color={party.index}>
         <div className={s.container}>
-            <Input name="name" value={party.name} onChange={handleNameChange} error={party.nameError}/>
+            <div className={s.input}>
+                <Input name="name" value={party.name} onChange={handleNameChange} error={party.nameError}/>
+            </div>
             <div className={s.icons}>
                 <button type="button" className={s.deleteButton} onClick={handleDeleteClick}>
                     <div className={s.crossIcon} />
                 </button>
             </div>
-            <Input name="votes" type="number" value={party.votes} onChange={handleVotesChange} error={party.votesError} />
-            <Input name="ignores-treshold" type="checkbox" checked={party.ignoresTreshold} onChange={handleIgnoresTresholdChange}/>
+            <div className={s.input}>
+                <Input name="votes" type="number" value={party.votes} onChange={handleVotesChange} error={party.votesError} />
+            </div>
+            <div className={s.input}>
+                <Input name="ignores-treshold" type="checkbox" checked={party.ignoresTreshold} onChange={handleIgnoresTresholdChange}/>
+            </div>
         </div>
     </Fieldset>
 }
