@@ -7,13 +7,21 @@
     color: sys.$neutral000;
     font-size: sys.$large-text;
     font-weight: bold;
-    padding: 0 sys.$w16;
     height: sys.$w64;
     z-index: 2;
+    box-shadow: sys.$shadow;
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.title-bar-inner {
+    max-width: sys.$w1200;
+    min-width: sys.$w960;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    box-shadow: sys.$shadow;
+    gap: sys.$w64;
 }
 
 .title {
@@ -45,6 +53,11 @@
 
     .title-bar {
         justify-content: stretch;
+        justify-items: stretch;
+    }
+
+    .title-bar-inner {
+        min-width: unset;
     }
 
     .nav-container {

@@ -7,11 +7,13 @@ const Results = lazy(() => import("../results"));
 const Calculator = lazy(() => import("../calculator/component"));
 
 export const Shell = () => {
-    return <div className={s.shell}>
+    return <>
         <header className={s.titleBar}>
-            <span className={s.title}>D&apos;Hondt calculator</span>
-            <div className={s.navContainer}>
-                <Nav />
+            <div className={s.titleBarInner}>
+                <span className={s.title}>D&apos;Hondt calculator</span>
+                <div className={s.navContainer}>
+                    <Nav />
+                </div>
             </div>
         </header>
         <main className={s.main}>
@@ -34,5 +36,5 @@ export const Shell = () => {
                 </Suspense>
             </div>
         </main>
-    </div>
+    </>
 }
