@@ -17,7 +17,7 @@ describe('isInteger validator', () => {
                 isInteger();
             });
 
-            expect(result).toBe("Needs to be integer");
+            expect(result).toBe("integers only");
         });
     });
 
