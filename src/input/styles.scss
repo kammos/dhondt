@@ -11,6 +11,7 @@
     justify-content: space-between;
     font-weight: bold;
     box-shadow: sys.$shadow-inset;
+    height: 52px;
     cursor: text;
 
     &:focus-within {
@@ -82,4 +83,13 @@
     &:checked::before {
         transform: scale(1);
     }
+}
+
+.error {
+    color: sys.$minus600;
+}
+
+.has-error.has-error {
+    box-shadow: sys.$shadow-error;
+    background-color: sys.$minus100;
 }

@@ -19,12 +19,13 @@ exports[`MainSettings component should match snapshot 1`] = `
       <label
         class="label number"
       >
-        <span
+        <div
           class="labelText"
         >
-          Seats
-          :
-        </span>
+          <div>
+            Seats
+          </div>
+        </div>
         <input
           class="input"
           name="seats"
@@ -35,12 +36,13 @@ exports[`MainSettings component should match snapshot 1`] = `
       <label
         class="label number"
       >
-        <span
+        <div
           class="labelText"
         >
-          Treshold
-          :
-        </span>
+          <div>
+            Treshold
+          </div>
+        </div>
         <input
           class="input"
           name="treshold"

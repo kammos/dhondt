@@ -7,6 +7,8 @@ export const MainSettings = () => {
     const dispatch = useDispatch();
     const seats = useSelector(state => state.calculator.seats);
     const treshold = useSelector(state => state.calculator.treshold);
+    const seatsError = useSelector(state => state.calculator.seatsError);
+    const tresholdError = useSelector(state => state.calculator.tresholdError);
 
     const handleSeatsChange = event => {
         dispatch(calculatorActions.setSeats(parseInt(event.target.value, 10)));
@@ -14,18 +16,6 @@ export const MainSettings = () => {
 
     const handleTresholdChange = event => {
         dispatch(calculatorActions.setTreshold(parseInt(event.target.value, 10)));
-    }
-
-    const handleSeatsBlur = event => {
-        if (event.target.value === '') {
-            dispatch(calculatorActions.setSeats(0));
-        }
-    }
-
-    const handleTresholdBlur = event => {
-        if (event.target.value === '') {
-            dispatch(calculatorActions.setTreshold(0));
-        }
     }
     
     // cannot use real fieldset here due to bugs in chrome
@@ -38,8 +28,8 @@ export const MainSettings = () => {
             Main settings
         </div>
         <div className={s.inputs}>
-            <Input name="seats" type="number" value={seats} onChange={handleSeatsChange} onBlur={handleSeatsBlur} />
-            <Input name="treshold" type="number" value={treshold} onChange={handleTresholdChange} onBlur={handleTresholdBlur}/>
+            <Input name="seats" type="number" value={seats} error={seatsError} onChange={handleSeatsChange} />
+            <Input name="treshold" type="number" value={treshold} error={tresholdError} onChange={handleTresholdChange} />
         </div>
     </div>
 }

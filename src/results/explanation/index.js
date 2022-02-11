@@ -4,7 +4,20 @@ import s from "./styles.scss";
 
 const greatestAbsoluteDifferenceFromIdeal = (partyA, partyB) => Math.abs(partyB.difference) - Math.abs(partyA.difference);
 
-export const Explanation = ({parties}) => {
+export const Explanation = ({parties, isDataValid}) => {
+    if (!isDataValid) {
+        return <div className={s.container}>
+            <header className={s.error}>
+                The data you entered is invalid
+            </header>
+            <div className={s.text}>
+                <p>
+                    It seems that some of the data you entered is invalid. Please go back to the <Link href="/setyp" className={s.link}>Enter data</Link> tab and correct all fields marked in red.
+                </p>
+            </div>
+        </div>
+    }
+
     if (parties.length === 0) {
         return <div className={s.container}>
             <header>

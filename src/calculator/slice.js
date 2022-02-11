@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { calculateSeats } from "./calculate-seats";
+import { validateAll, validateParty } from "./validate";
 
 const names = ['Red', 'Green', 'Blue', 'Pink', 'Lime', 'Turquise', 'Magenta'];
 
@@ -26,6 +27,8 @@ const slice = createSlice({
                 ignoresTreshold: false,
             };
 
+            validateParty(state.parties[nextIndex]);
+
             state.nextIndex++;
             state.resultsValid = false;
         },
@@ -42,6 +45,7 @@ const slice = createSlice({
 
                 state.parties[partyIndex].votes = votes;
                 state.resultsValid = false;
+                validateParty(state.parties[partyIndex]);
             }
         },
         setName: {
@@ -53,6 +57,7 @@ const slice = createSlice({
 
                 state.parties[partyIndex].name = name;
                 state.resultsValid = false;
+                validateParty(state.parties[partyIndex]);
             }
         },
         setIgnoresTreshold: {
@@ -64,15 +69,19 @@ const slice = createSlice({
 
                 state.parties[partyIndex].ignoresTreshold = ignoresTreshold;
                 state.resultsValid = false;
+                validateParty(state.parties[partyIndex]);
             }
         },
         setSeats(state, action) {
             state.seats = action.payload;
             state.resultsValid = false;
+            validateAll(state)
         },
         setTreshold(state, action) {
+            console.log(action);
             state.treshold = action.payload;
             state.resultsValid = false;
+            validateAll(state);
         },
         updateResults(state) {
             state.results = calculateSeats(state.parties, state.seats, state.treshold);

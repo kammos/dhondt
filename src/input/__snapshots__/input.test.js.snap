@@ -5,12 +5,13 @@ exports[`Input component should support checkboxes 1`] = `
   <label
     class="label checkbox"
   >
-    <span
+    <div
       class="labelText"
     >
-      Input
-      :
-    </span>
+      <div>
+        Input
+      </div>
+    </div>
     <input
       class="input"
       name="input"
@@ -27,12 +28,13 @@ exports[`Input component should support number inputs 1`] = `
   <label
     class="label number"
   >
-    <span
+    <div
       class="labelText"
     >
-      Input
-      :
-    </span>
+      <div>
+        Input
+      </div>
+    </div>
     <input
       class="input"
       name="input"
@@ -49,12 +51,13 @@ exports[`Input component should support text inputs 1`] = `
   <label
     class="label undefined"
   >
-    <span
+    <div
       class="labelText"
     >
-      Input
-      :
-    </span>
+      <div>
+        Input
+      </div>
+    </div>
     <input
       class="input"
       name="input"

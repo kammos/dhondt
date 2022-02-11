@@ -3,7 +3,7 @@ import { validated } from "./validated";
 
 
 export const notEmpty = 
-    validator(value => value != null && value != '', "Can not be empty");
+    validator(value => value != null && value !== '' && !Number.isNaN(value), "Can not be empty");
 
 export const moreThan = 
     parametrizedValidator((value, target) => value > target, target => `Needs to be more than ${target}`);

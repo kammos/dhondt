@@ -23,27 +23,15 @@ export const Party = ({party}) => {
         dispatch(calculatorActions.removeParty(party.index));
     }
 
-    const handleVotesBlur = event => {
-        if (event.target.value === '') {
-            dispatch(calculatorActions.setVotes(party.index, 0));
-        }
-    }
-
-    const handleNameBlur = event => {
-        if (event.target.value === '') {
-            dispatch(calculatorActions.setName(party.index, `Party ${party.index}`));
-        }
-    }
-
     return <Fieldset color={party.index}>
         <div className={s.container}>
-            <Input name="name" value={party.name} onChange={handleNameChange} onBlur={handleNameBlur}/>
+            <Input name="name" value={party.name} onChange={handleNameChange} error={party.nameError}/>
             <div className={s.icons}>
                 <button type="button" className={s.deleteButton} onClick={handleDeleteClick}>
                     <div className={s.crossIcon} />
                 </button>
             </div>
-            <Input name="votes" type="number" value={party.votes} onChange={handleVotesChange} onBlur={handleVotesBlur}/>
+            <Input name="votes" type="number" value={party.votes} onChange={handleVotesChange} error={party.votesError} />
             <Input name="ignores-treshold" type="checkbox" checked={party.ignoresTreshold} onChange={handleIgnoresTresholdChange}/>
         </div>
     </Fieldset>

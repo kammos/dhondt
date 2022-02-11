@@ -8,6 +8,7 @@ describe("Results component", () => {
     it("should render", () => {
         const initialState = {
             calculator: {
+                parties: {},
                 resultsValid: true,
                 results: {
                     '0': {
@@ -85,6 +86,7 @@ describe("Results component", () => {
     it("should render a proper message if no party lost or gained any seats", () => {
         const initialState = {
             calculator: {
+                parties: {},
                 resultsValid: true,
                 results: {
                     '0': {
