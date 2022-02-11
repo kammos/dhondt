@@ -19,7 +19,7 @@ export const Shell = () => {
         </header>
         <main className={s.main}>
             <div className={s.content}>
-                <Suspense fallback="fallback">
+                <Suspense fallback={null}>
                     <Switch>
                         <Route path="/about">
                             the about
