@@ -1,6 +1,5 @@
 import { cnb } from "cnbuilder";
-import camelCase from "lodash/camelCase";
-import startCase from "lodash/startCase";
+import { titleCase } from "../misc";
 import s from "./styles.scss";
 
 const normalizeForNumber = value => 
@@ -13,7 +12,7 @@ export const Input = ({name, type, value, error, className, style, ...rest}) => 
 
     return <label className={cnb(s.label, s[type], error && s.hasError)}>
         <div className={s.labelText}>
-            <div>{startCase(camelCase(name))}</div>
+            <div>{titleCase(name)}</div>
             {error && <div className={s.error}>{error}</div>}
         </div> 
         <input name={name} type={type} className={s.input} value={inputValue} {...rest} />
