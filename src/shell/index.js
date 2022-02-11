@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
-import { Redirect, Route, Switch } from "wouter";
+import { Redirect, Route, Router, Switch } from "wouter";
+import { useHashLocation } from "../routing";
 import { Nav } from "../nav";
 import s from "./styles.scss";
 
@@ -7,7 +8,7 @@ const Results = lazy(() => import("../results"));
 const Calculator = lazy(() => import("../calculator/component"));
 
 export const Shell = () => {
-    return <>
+    return <Router hook={useHashLocation}>
         <header className={s.titleBar}>
             <div className={s.titleBarInner}>
                 <span className={s.title}>D&apos;Hondt calculator</span>
@@ -36,5 +37,5 @@ export const Shell = () => {
                 </Suspense>
             </div>
         </main>
-    </>
+    </Router>
 }

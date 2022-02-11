@@ -4,22 +4,17 @@ import { NavLink } from "./nav-link";
 import s from "./styles.scss";
 
 export const Nav = () => {
-    const activeLinkElement = useRef();
-    const [shadowOffset, setShadowOffset] = useState(0);
-    const [shadowWidth, setShadowWidth] = useState(0);
+    const shadowRef = useRef();
     const [shadowSkipAnimation, setShadowSkipAnimation] = useState(false);
 
     const setActiveLink = linkRef => {
-        activeLinkElement.current = linkRef.current;
-        setShadowOffset(activeLinkElement.current.offsetLeft);
-        setShadowWidth(activeLinkElement.current.scrollWidth);
+        shadowRef.current.style.left = `${linkRef.current.offsetLeft}px`;
+        shadowRef.current.style.width = `${linkRef.current.scrollWidth}px`;
     }
 
     useEffect(() => {
         let timeout;
         const handler = () => {
-            setShadowOffset(activeLinkElement.current.offsetLeft);
-            setShadowWidth(activeLinkElement.current.scrollWidth);
             setShadowSkipAnimation(true);
 
             clearTimeout(timeout);
@@ -36,24 +31,21 @@ export const Nav = () => {
     }, []);
 
     return <nav className={s.nav}>
-        <div className={cnb(s.shadow, shadowSkipAnimation && s.skipAnimation)} style={{left: shadowOffset, width: `${shadowWidth}px`}}/>
+        <div className={cnb(s.shadow, shadowSkipAnimation && s.skipAnimation)} ref={shadowRef} />
         <NavLink 
             href="/setup" 
-            activeLinkElement={activeLinkElement} 
             setActiveLink={setActiveLink}
         >
             Enter data
         </NavLink>
         <NavLink 
             href="/results" 
-            activeLinkElement={activeLinkElement} 
             setActiveLink={setActiveLink}
         >
             See results
         </NavLink>
         <NavLink 
             href="/about" 
-            activeLinkElement={activeLinkElement} 
             setActiveLink={setActiveLink}
         >
             About
