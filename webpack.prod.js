@@ -5,6 +5,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = merge(common, {
     mode: 'production',
     devtool: 'source-map',
+    output: {
+        publicPath: 'dhondt',
+    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "[name].css",
