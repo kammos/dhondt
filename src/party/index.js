@@ -29,7 +29,7 @@ export const Party = ({party}) => {
                 <Input name="name" value={party.name} onChange={handleNameChange} error={party.nameError}/>
             </div>
             <div className={s.icons}>
-                <button type="button" className={s.deleteButton} onClick={handleDeleteClick}>
+                <button type="button" className={s.deleteButton} onClick={handleDeleteClick} aria-label="delete party">
                     <div className={s.crossIcon} />
                 </button>
             </div>
