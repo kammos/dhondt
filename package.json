@@ -3,11 +3,14 @@
   "version": "0.0.420",
   "description": "",
   "main": "index.js",
+  "homepage": "https://kammos.github.io/dhondt",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js --node-env production",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +27,7 @@
     "cnbuilder": "^3.1.0",
     "css-loader": "^3.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "identity-obj-proxy": "^3.0.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.5.3",
