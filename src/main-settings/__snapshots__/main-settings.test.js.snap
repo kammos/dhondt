@@ -16,40 +16,58 @@ exports[`MainSettings component should match snapshot 1`] = `
     <div
       class="inputs"
     >
-      <label
-        class="label number"
+      <div
+        class="container"
       >
-        <div
-          class="labelText"
+        <label
+          class="label number"
         >
-          <div>
+          <div
+            class="labelText"
+          >
             Seats
           </div>
-        </div>
-        <input
-          class="input"
-          name="seats"
-          type="number"
-          value="100"
-        />
-      </label>
-      <label
-        class="label number"
-      >
+          <input
+            aria-invalid="false"
+            class="input"
+            name="seats"
+            type="number"
+            value="100"
+          />
+        </label>
         <div
-          class="labelText"
+          aria-live="polite"
+          class="error"
+          hidden=""
+          id="seats-error-0"
+        />
+      </div>
+      <div
+        class="container"
+      >
+        <label
+          class="label number"
         >
-          <div>
+          <div
+            class="labelText"
+          >
             Treshold
           </div>
-        </div>
-        <input
-          class="input"
-          name="treshold"
-          type="number"
-          value="0"
+          <input
+            aria-invalid="false"
+            class="input"
+            name="treshold"
+            type="number"
+            value="0"
+          />
+        </label>
+        <div
+          aria-live="polite"
+          class="error"
+          hidden=""
+          id="treshold-error-1"
         />
-      </label>
+      </div>
     </div>
   </div>
 </div>
