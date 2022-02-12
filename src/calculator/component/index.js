@@ -15,7 +15,7 @@ export const Calculator = () => {
         dispatch(calculatorActions.addParty());
     }
 
-    return <form className={s.form}>
+    return <form className={s.form} autoComplete="off">
         <div className={s.mainSettings}>
             <MainSettings />
         </div>
