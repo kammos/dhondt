@@ -4,6 +4,7 @@ import { Fieldset } from "../../fieldset";
 import { MainSettings } from "../../main-settings";
 import { Party } from "../../party";
 import s from "./styles.scss";
+import common from "../../common.scss";
 
 const addParty = () => (dispatch, getState) => {
     dispatch(calculatorActions.addParty());
@@ -28,19 +29,22 @@ export const Calculator = () => {
         dispatch(addParty());
     }
 
-    return <form className={s.form} autoComplete="off">
-        <div className={s.mainSettings}>
-            <MainSettings />
-        </div>
-        <div className={s.parties}>
-            {Object.values(parties).map(party => <Party key={party.index} party={party} />)}
-            <Fieldset color={nextIndex} legend="New party">
-                <button type="button" className={s.addParty} onClick={handleAddPartyClick}>
-                    New party
-                </button>
-            </Fieldset>
-        </div>
-    </form>
+    return <>
+        <h1 className={common.srOnly}>Enter data</h1>
+        <form className={s.form} autoComplete="off">
+            <div className={s.mainSettings}>
+                <MainSettings />
+            </div>
+            <div className={s.parties}>
+                {Object.values(parties).map(party => <Party key={party.index} party={party} />)}
+                <Fieldset color={nextIndex} legend="New party">
+                    <button type="button" className={s.addParty} onClick={handleAddPartyClick}>
+                        New party
+                    </button>
+                </Fieldset>
+            </div>
+        </form>
+    </>
 }
 
 export default Calculator;

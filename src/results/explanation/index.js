@@ -1,15 +1,16 @@
 import { Link } from "wouter";
 import { seatsFormatter, seatsFormatterReversed } from "../../misc";
 import s from "./styles.scss";
+import common from "../../common.scss";
 
 const greatestAbsoluteDifferenceFromIdeal = (partyA, partyB) => Math.abs(partyB.difference) - Math.abs(partyA.difference);
 
 export const Explanation = ({parties, isDataValid}) => {
     if (!isDataValid) {
         return <div className={s.container}>
-            <header className={s.error}>
+            <h2 className={s.error}>
                 The data you entered is invalid
-            </header>
+            </h2>
             <div className={s.text}>
                 <p>
                     It seems that some of the data you entered is invalid. Please go back to the <Link href="/setyp" className={s.link}>Enter data</Link> tab and correct all fields marked in red.
@@ -20,9 +21,9 @@ export const Explanation = ({parties, isDataValid}) => {
 
     if (parties.length === 0) {
         return <div className={s.container}>
-            <header>
+            <h2>
                 It seems that you didn&apos;t enter any parties
-            </header>
+            </h2>
             <div className={s.text}>
                 <p>
                     To see election results, please go back to the <Link href="/setyp" className={s.link}>Enter data</Link> tab and fill in at least one party.
@@ -35,9 +36,9 @@ export const Explanation = ({parties, isDataValid}) => {
 
     if (party.difference === 0) {
         return <div className={s.container}>
-            <header>
+            <h2>
                 Wow, no party lost or gained any seats!
-            </header>
+            </h2>
             <div className={s.text}>
                 <p>
                     Sadly, this is a rare occurence with the D&apos;Hondt method. 
@@ -50,9 +51,9 @@ export const Explanation = ({parties, isDataValid}) => {
     }
 
     return <div className={s.container}>
-        <header>
+        <h2>
             Seems low?
-        </header>
+        </h2>
         <div className={s.text}>
             <p>
                 Remember, this simulator only shows resuls for a <em>single voting district</em>. 

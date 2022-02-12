@@ -29,7 +29,6 @@ export const SeatsPerParty = ({parties}) => {
     };
 
     const fallbackContent = <>
-        <p>Seats per party</p>
         {parties.map(party => <p key={party.index}>
             {party.name} - {party.votes} votes;
         </p>)}

@@ -37,7 +37,6 @@ export const DifferenceFromIdeal = ({parties}) => {
     }
 
     const fallbackContent = <>
-        <p>Seats gained or lost by each party due to inaccuracy of D&apos;Hondt method</p>
         {parties.map(party => <p key={party.index}>
             {party.name} - {seatsFormatter(party.difference)};
         </p>)}
