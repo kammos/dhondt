@@ -1,5 +1,4 @@
-import { isInteger } from "lodash";
-import { atLeast, atMost, notEmpty, validate } from "../validation"
+import { atLeast, atMost, isInteger, notEmpty, validate } from "../validation"
 
 export const validateParty = party => {
     party.nameError = validate(party.name, () => {
