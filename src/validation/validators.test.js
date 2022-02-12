@@ -4,7 +4,7 @@ import { isInteger } from "./validators";
 
 describe('isInteger validator', () => {
     it('should correctly recognize integers', () => {
-        [5, '5', 0, '0'].forEach(value => {
+        [5, '5', 0, '0', '-1', -1].forEach(value => {
             const result = validate(value, () => {
                 isInteger();
             });
@@ -12,7 +12,7 @@ describe('isInteger validator', () => {
             expect(result).toBe(null);
         });
 
-        [-1, 0.5, '-1', '0.5', '', '0x112', 'dog', '12dog'].forEach(value => {
+        [0.5, '0.5', '', '0x112', 'dog', '12dog'].forEach(value => {
             const result = validate(value, () => {
                 isInteger();
             });
@@ -22,7 +22,7 @@ describe('isInteger validator', () => {
     });
 
     it('should allow to overwrite message', () => {
-        const result = validate(-1, () => {
+        const result = validate('owca', () => {
             isInteger("failed");
         });
 

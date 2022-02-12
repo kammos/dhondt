@@ -18,7 +18,7 @@ export const atMost =
     parametrizedValidator((value, target) => value <= target, target => `at most ${target}`);
 
 export const isInteger = 
-    validator(value => (Number.isInteger(value) && value >= 0) || (typeof value == "string" && value.match(/^\d+$/)), "integers only");
+    validator(value => Number.isInteger(value) || (typeof value == "string" && value.match(/^[-\d]+$/)), "integers only");
 
 
 
