@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { calculatorReducer } from '../src/calculator';
+import '@testing-library/jest-dom';
 
 
 const customRender = (ui, { initialState, store, ...options } = {}) => {

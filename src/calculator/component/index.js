@@ -5,6 +5,19 @@ import { MainSettings } from "../../main-settings";
 import { Party } from "../../party";
 import s from "./styles.scss";
 
+const addParty = () => (dispatch, getState) => {
+    dispatch(calculatorActions.addParty());
+    const state = getState();
+
+    setTimeout(() => {
+        const firstInputOfParty = document.querySelector(`input[data-partystart="${state.calculator.nextIndex - 1}"]`);
+
+        if (firstInputOfParty) {
+            firstInputOfParty.focus();
+        }
+    }, 0);
+}
+
 export const Calculator = () => {
     const dispatch = useDispatch();
     const parties = useSelector(state => state.calculator.parties);
@@ -12,7 +25,7 @@ export const Calculator = () => {
 
 
     const handleAddPartyClick = () => {
-        dispatch(calculatorActions.addParty());
+        dispatch(addParty());
     }
 
     return <form className={s.form} autoComplete="off">
