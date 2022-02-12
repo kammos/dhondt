@@ -1,18 +1,16 @@
 @use "../sys";
 
-.label {
-    outline: none;
+.container {
+    position: relative;
+    display: grid;
+    place-items: stretch;
+    height: 52px;
     background-color: sys.$primary050;
-    padding: sys.$w8;
+    // padding: sys.$w16 sys.$w8 0 sys.$w8;
     transition: all 0.2s;
     outline: 2px transparent solid;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
     box-shadow: sys.$shadow-inset;
-    height: 52px;
-    cursor: text;
+    font-weight: bold;
 
     &:focus-within {
         outline: 2px sys.$primary900 solid;
@@ -24,13 +22,9 @@
     }
 }
 
-.label.checkbox {
-    cursor: default;
-}
-
-.label-text {
-    color: sys.$primary600;
-    white-space: nowrap;
+.label {
+    display: grid;
+    place-items: stretch;
 }
 
 .input {
@@ -41,25 +35,26 @@
     color: sys.$primary900 !important;
     font-size: sys.$mid-text;
     font-weight: bold;
-    margin-left: sys.$w8;
     min-width: 0px;
     /* so that autofill in Chrome doesn't ruin colors */
     -webkit-background-clip: text;
     background-clip: text;
     caret-color: sys.$primary900;
-}
+    padding: sys.$w16 sys.$w8 0px sys.$w8;
 
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
-.input[type="number"] {
-    -moz-appearance: textfield;
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
 }
 
 .input[type="checkbox"] {
+    padding: 0;
     appearance: none;
     background-color: transparent;
     margin: 0;
@@ -85,17 +80,49 @@
     }
 }
 
+.label-text {
+    position: absolute;
+    top: sys.$w4;
+    left: sys.$w4;
+    white-space: nowrap;
+    position: absolute;
+    font-size: sys.$small-text;
+}
+
+.error {
+    position: absolute;
+    top: sys.$w4;
+    right: sys.$w4;
+    white-space: nowrap;
+    position: absolute;
+    font-size: sys.$small-text;
+}
+
+.label {
+    color: sys.$primary600;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: sys.$w8;
+}
+
 .error {
     color: sys.$minus600;
 }
 
-.has-error.has-error {
+.has-error,
+.has-error:focus,
+.has-error:hover {
     box-shadow: sys.$shadow-error;
     background-color: sys.$minus100;
 }
 
 @media (max-width: sys.$sm) {
-    .label-text {
+    .label,
+    .error {
         font-size: sys.$small-text;
     }
 

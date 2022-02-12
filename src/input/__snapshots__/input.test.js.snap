@@ -2,68 +2,95 @@
 
 exports[`Input component should support checkboxes 1`] = `
 <div>
-  <label
-    class="label checkbox"
+  <div
+    class="container"
   >
-    <div
-      class="labelText"
+    <label
+      class="label checkbox"
     >
-      <div>
+      <div
+        class="labelText"
+      >
         Input
       </div>
-    </div>
-    <input
-      class="input"
-      name="input"
-      readonly=""
-      type="checkbox"
-      value=""
+      <input
+        aria-invalid="false"
+        class="input"
+        name="input"
+        readonly=""
+        type="checkbox"
+        value=""
+      />
+    </label>
+    <div
+      aria-live="polite"
+      class="error"
+      hidden=""
+      id="input-error-2"
     />
-  </label>
+  </div>
 </div>
 `;
 
 exports[`Input component should support number inputs 1`] = `
 <div>
-  <label
-    class="label number"
+  <div
+    class="container"
   >
-    <div
-      class="labelText"
+    <label
+      class="label number"
     >
-      <div>
+      <div
+        class="labelText"
+      >
         Input
       </div>
-    </div>
-    <input
-      class="input"
-      name="input"
-      readonly=""
-      type="number"
-      value=""
+      <input
+        aria-invalid="false"
+        class="input"
+        name="input"
+        readonly=""
+        type="number"
+        value=""
+      />
+    </label>
+    <div
+      aria-live="polite"
+      class="error"
+      hidden=""
+      id="input-error-1"
     />
-  </label>
+  </div>
 </div>
 `;
 
 exports[`Input component should support text inputs 1`] = `
 <div>
-  <label
-    class="label undefined"
+  <div
+    class="container"
   >
-    <div
-      class="labelText"
+    <label
+      class="label undefined"
     >
-      <div>
+      <div
+        class="labelText"
+      >
         Input
       </div>
-    </div>
-    <input
-      class="input"
-      name="input"
-      readonly=""
-      value="value"
+      <input
+        aria-invalid="false"
+        class="input"
+        name="input"
+        readonly=""
+        value="value"
+      />
+    </label>
+    <div
+      aria-live="polite"
+      class="error"
+      hidden=""
+      id="input-error-0"
     />
-  </label>
+  </div>
 </div>
 `;
