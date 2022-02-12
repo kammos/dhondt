@@ -68,3 +68,15 @@
         padding: sys.$w32;
     }
 }
+
+@media (max-width: sys.$sm) {
+    .main {
+        padding: sys.$w32 sys.$w16;
+    }
+}
+
+@media (max-width: sys.$xs) {
+    .main {
+        padding: sys.$w32 sys.$w4;
+    }
+}

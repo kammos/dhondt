@@ -28,7 +28,7 @@
     cursor: default;
 }
 
-.labelText {
+.label-text {
     color: sys.$primary600;
     white-space: nowrap;
 }
@@ -92,4 +92,14 @@
 .has-error.has-error {
     box-shadow: sys.$shadow-error;
     background-color: sys.$minus100;
+}
+
+@media (max-width: sys.$sm) {
+    .label-text {
+        font-size: sys.$small-text;
+    }
+
+    .error {
+        font-size: sys.$small-text;
+    }
 }

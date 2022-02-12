@@ -8,3 +8,9 @@
     box-shadow: sys.$shadow;
     display: grid;
 }
+
+@media (max-width: sys.$sm) {
+    .fieldset {
+        border-left: sys.$w4 solid;
+    }
+}
