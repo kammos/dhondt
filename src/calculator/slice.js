@@ -78,7 +78,6 @@ const slice = createSlice({
             validateAll(state)
         },
         setTreshold(state, action) {
-            console.log(action);
             state.treshold = action.payload;
             state.resultsValid = false;
             validateAll(state);
