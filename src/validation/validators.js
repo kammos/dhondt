@@ -1,9 +1,10 @@
 import { ValidationError } from "./validation-error";
 import { validated } from "./validated";
 
+const isWhitespace = value => typeof value === "string" && value.replace(/\s/g, '').length === 0;
 
 export const notEmpty = 
-    validator(value => value != null && value !== '' && !Number.isNaN(value), "can not be empty");
+    validator(value => value != null && !isWhitespace(value) && !Number.isNaN(value), "can not be empty");
 
 export const moreThan = 
     parametrizedValidator((value, target) => value > target, target => `more than ${target}`);
