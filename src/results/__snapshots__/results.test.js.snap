@@ -9,14 +9,16 @@ exports[`Results component should render 1`] = `
       class="chartContainer"
     >
       <chartjs-bar>
-        {"options":{"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[24,22],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}}
+        {"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}}
+        {"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[24,22],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}
       </chartjs-bar>
     </div>
     <div
       class="chartContainer"
     >
       <chartjs-bar>
-        {"options":{"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[0.08695652173912904,0.2608695652173907],"backgroundColor":["plus","plus"]}]}}
+        {"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}}
+        {"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[0.08695652173912904,0.2608695652173907],"backgroundColor":["plus","plus"]}]}
       </chartjs-bar>
     </div>
     <div
@@ -70,14 +72,16 @@ exports[`Results component should render a proper message if no party lost or ga
       class="chartContainer"
     >
       <chartjs-bar>
-        {"options":{"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[24,22],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}}
+        {"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}}
+        {"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[24,22],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}
       </chartjs-bar>
     </div>
     <div
       class="chartContainer"
     >
       <chartjs-bar>
-        {"options":{"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[0,0],"backgroundColor":["minus","minus"]}]}}
+        {"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}}
+        {"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[0,0],"backgroundColor":["minus","minus"]}]}
       </chartjs-bar>
     </div>
     <div
@@ -148,14 +152,16 @@ exports[`Results component should render even if there are no results preloaded 
       class="chartContainer"
     >
       <chartjs-bar>
-        {"options":{"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[52,48],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}}
+        {"plugins":{"title":{"text":"Seats per party","display":true,"font":{"weight":"bold","color":"neutral","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"x":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}}}
+        {"labels":["Green","Red"],"datasets":[{"label":"Seats","data":[52,48],"backgroundColor":["hsl(110, 75%, 60%)","hsl(0, 75%, 60%)"]}]}
       </chartjs-bar>
     </div>
     <div
       class="chartContainer"
     >
       <chartjs-bar>
-        {"options":{"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}},"data":{"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[-0.3809523809523867,0.3809523809523867],"backgroundColor":["minus","plus"]}]}}
+        {"plugins":{"title":{"text":"Difference from ideal number of seats","display":true,"font":{"weight":"bold","size":16}},"datalabels":{"color":"neutral","font":{"weight":"bold","color":"neutral","size":16}}},"responsive":true,"maintainAspectRatio":true,"aspectRatio":1,"indexAxis":"y","scales":{"y":{"ticks":{"font":{"weight":"bold","color":"neutral","size":16}}},"x":{"suggestedMin":-0.5,"suggestedMax":0.5}}}
+        {"labels":["Green","Red"],"datasets":[{"label":"Seats gained or lost due to inaccuracy of D'Hondt method","data":[-0.3809523809523867,0.3809523809523867],"backgroundColor":["minus","plus"]}]}
       </chartjs-bar>
     </div>
     <div

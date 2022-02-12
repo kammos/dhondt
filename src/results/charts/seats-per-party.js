@@ -3,23 +3,22 @@ import { getColorByIndex } from "../../misc";
 import { font } from "./_helpers";
 import { neutral } from "../../_sys.scss";
 
+const options = {
+    plugins: {
+        title: { text: 'Seats per party', display: true, font: font  },
+        datalabels: { color: neutral, font: {...font} }
+    },
+    responsive: true,
+    maintainAspectRatio: true,
+    aspectRatio: 1,
+    x: {
+        ticks: {
+            font: {...font}
+        }
+    }
+};
 
 export const SeatsPerParty = ({parties}) => {
-    const options = {
-        plugins: {
-            title: { text: 'Seats per party', display: true, font: font  },
-            datalabels: { color: neutral, font: {...font} }
-        },
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1,
-        x: {
-            ticks: {
-                font: {...font}
-            }
-        }
-    };
-
     const data = {
         labels: parties.map(party => party.name),
         datasets: [{
@@ -29,5 +28,12 @@ export const SeatsPerParty = ({parties}) => {
         }]
     };
 
-    return <Bar options={options} data={data} />
+    const fallbackContent = <>
+        <p>Seats per party</p>
+        {parties.map(party => <p key={party.index}>
+            {party.name} - {party.votes} votes;
+        </p>)}
+    </>
+
+    return <Bar options={options} data={data} fallbackContent={fallbackContent} />
 }
