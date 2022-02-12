@@ -26,7 +26,7 @@ export const Party = ({party}) => {
     return <Fieldset color={party.index}>
         <div className={s.container}>
             <div className={s.input}>
-                <Input name="name" value={party.name} onChange={handleNameChange} error={party.nameError}/>
+                <Input name="party name" value={party.name} onChange={handleNameChange} error={party.nameError}/>
             </div>
             <div className={s.icons}>
                 <button type="button" className={s.deleteButton} onClick={handleDeleteClick} aria-label="delete party">
