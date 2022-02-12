@@ -34,7 +34,7 @@ export const Calculator = () => {
         </div>
         <div className={s.parties}>
             {Object.values(parties).map(party => <Party key={party.index} party={party} />)}
-            <Fieldset color={nextIndex}>
+            <Fieldset color={nextIndex} legend="New party">
                 <button type="button" className={s.addParty} onClick={handleAddPartyClick}>
                     New party
                 </button>

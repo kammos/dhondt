@@ -23,7 +23,7 @@ export const Party = ({party}) => {
         dispatch(calculatorActions.removeParty(party.index));
     }
 
-    return <Fieldset color={party.index}>
+    return <Fieldset color={party.index} legend={`party ${party.index}`}>
         <div className={s.container}>
             <div className={s.input}>
                 <Input
