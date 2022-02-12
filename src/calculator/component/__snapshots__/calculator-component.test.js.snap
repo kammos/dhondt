@@ -85,6 +85,11 @@ exports[`calculator-component should focus newly added party's name input 1`] = 
         class="fieldset"
         style="border-color: hsl(0, 75%, 60%);"
       >
+        <legend
+          class="srOnly"
+        >
+          party 0
+        </legend>
         <div
           class="container"
         >
@@ -197,6 +202,11 @@ exports[`calculator-component should focus newly added party's name input 1`] = 
         class="fieldset"
         style="border-color: hsl(110, 75%, 60%);"
       >
+        <legend
+          class="srOnly"
+        >
+          New party
+        </legend>
         <button
           class="addParty"
           type="button"
@@ -294,6 +304,11 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
         class="fieldset"
         style="border-color: hsl(0, 75%, 60%);"
       >
+        <legend
+          class="srOnly"
+        >
+          party 0
+        </legend>
         <div
           class="container"
         >
@@ -406,6 +421,11 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
         class="fieldset"
         style="border-color: hsl(110, 75%, 60%);"
       >
+        <legend
+          class="srOnly"
+        >
+          party 1
+        </legend>
         <div
           class="container"
         >
@@ -518,6 +538,11 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
         class="fieldset"
         style="border-color: hsl(220, 75%, 60%);"
       >
+        <legend
+          class="srOnly"
+        >
+          New party
+        </legend>
         <button
           class="addParty"
           type="button"
