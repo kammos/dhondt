@@ -1,33 +1,5 @@
 @use "../../sys";
 
-.container {
-    max-width: sys.$w640;
-    color: sys.$neutral900;
-
-    h2 {
-        font-size: sys.$mid-text;
-        font-weight: bold;
-    }
-
-    p {
-        padding: sys.$w8 0px;
-    }
-
-    .text {
-        text-align: justify;
-    }
-
-    .link {
-        color: sys.$secondary600;
-        font-weight: bold;
-        text-decoration: underline;
-
-        &:hover {
-            color: sys.$secondary400;
-        }
-    }
-}
-
 .error {
     color: sys.$minus500;
 }
