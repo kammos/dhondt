@@ -34,6 +34,10 @@ export const calculateSeats = (parties, seatsToAssign, tresholdPercentage) => {
             }
         }
 
+        if (roundWinnerIndex === -1) {
+            break;
+        }
+
         result[roundWinnerIndex].seats += 1;
         quotients[roundWinnerIndex] = parties[roundWinnerIndex].votes / (result[roundWinnerIndex].seats + 1);
 

@@ -11,7 +11,7 @@ describe('calculator', () => {
                     0: { name: 'A', votes: 100_000 },
                     1: { name: 'B', votes: 80_000 },
                     2: { name: 'C', votes: 30_000 },
-                    3: { name: 'D', votes: 20_000 },          
+                    3: { name: 'D', votes: 20_000 },
                 },
             }
 
@@ -36,5 +36,23 @@ describe('calculator', () => {
             expect(newState.results).toEqual({});
             expect(newState.resultsValid).toBe(true);
         });
+
+        it("should not fail when no party meats treshold", () => {
+            const initialState = {
+                seats: 8,
+                resultsValid: false,
+                treshold: 100,
+                parties: {
+                    0: { name: 'A', votes: 100_000 },
+                    1: { name: 'B', votes: 100_000 },
+                },
+            };
+
+            const newState = calculatorReducer(initialState, calculatorActions.updateResults());
+            expect(newState.results).toEqual({
+                "0": { "difference": -4, "name": "A", "seats": 0, "votes": 100000 },
+                "1": { "difference": -4, "name": "B", "seats": 0, "votes": 100000 }
+            });
+        })
     });
 });
