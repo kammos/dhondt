@@ -40,14 +40,12 @@ exports[`Results component should render 1`] = `
       class="explanationContainer"
     >
       <div
-        class="container"
+        class="prose"
       >
         <h2>
           Seems low?
         </h2>
-        <div
-          class="text"
-        >
+        <div>
           <p>
             Remember, this simulator only shows resuls for a 
             <em>
@@ -118,14 +116,12 @@ exports[`Results component should render a proper message if no party lost or ga
       class="explanationContainer"
     >
       <div
-        class="container"
+        class="prose"
       >
         <h2>
           Wow, no party lost or gained any seats!
         </h2>
-        <div
-          class="text"
-        >
+        <div>
           <p>
             Sadly, this is a rare occurence with the D'Hondt method.
           </p>
@@ -153,18 +149,15 @@ exports[`Results component should render a proper message if there are no partie
       class="explanationContainer"
     >
       <div
-        class="container"
+        class="prose"
       >
         <h2>
           It seems that you didn't enter any parties
         </h2>
-        <div
-          class="text"
-        >
+        <div>
           <p>
             To see election results, please go back to the 
             <a
-              class="link"
               href="/setyp"
             >
               Enter data
@@ -218,14 +211,12 @@ exports[`Results component should render even if there are no results preloaded 
       class="explanationContainer"
     >
       <div
-        class="container"
+        class="prose"
       >
         <h2>
           Seems low?
         </h2>
-        <div
-          class="text"
-        >
+        <div>
           <p>
             Remember, this simulator only shows resuls for a 
             <em>

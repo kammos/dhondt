@@ -2,6 +2,11 @@
 
 exports[`calculator-component should focus newly added party's name input 1`] = `
 <div>
+  <h1
+    class="srOnly"
+  >
+    Enter data
+  </h1>
   <form
     autocomplete="off"
     class="form"
@@ -221,6 +226,11 @@ exports[`calculator-component should focus newly added party's name input 1`] = 
 
 exports[`calculator-component should focus newly added party's name input 2`] = `
 <div>
+  <h1
+    class="srOnly"
+  >
+    Enter data
+  </h1>
   <form
     autocomplete="off"
     class="form"
