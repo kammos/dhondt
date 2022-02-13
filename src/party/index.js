@@ -27,7 +27,7 @@ export const Party = ({party}) => {
         <div className={s.container}>
             <div className={s.input}>
                 <Input
-                    name="party name" 
+                    name="party-name" 
                     value={party.name} 
                     onChange={handleNameChange} 
                     error={party.nameError}

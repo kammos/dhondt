@@ -116,7 +116,7 @@ exports[`calculator-component should focus newly added party's name input 1`] = 
                   aria-invalid="false"
                   class="input"
                   data-partystart="0"
-                  name="party name"
+                  name="party-name"
                   value="Red"
                 />
               </label>
@@ -124,7 +124,7 @@ exports[`calculator-component should focus newly added party's name input 1`] = 
                 aria-live="polite"
                 class="error"
                 hidden=""
-                id="party name-error-2"
+                id="party-name-error-2"
               />
             </div>
           </div>
@@ -340,7 +340,7 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
                   aria-invalid="false"
                   class="input"
                   data-partystart="0"
-                  name="party name"
+                  name="party-name"
                   value="Red"
                 />
               </label>
@@ -348,7 +348,7 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
                 aria-live="polite"
                 class="error"
                 hidden=""
-                id="party name-error-2"
+                id="party-name-error-2"
               />
             </div>
           </div>
@@ -457,7 +457,7 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
                   aria-invalid="false"
                   class="input"
                   data-partystart="1"
-                  name="party name"
+                  name="party-name"
                   value="Green"
                 />
               </label>
@@ -465,7 +465,7 @@ exports[`calculator-component should focus newly added party's name input 2`] = 
                 aria-live="polite"
                 class="error"
                 hidden=""
-                id="party name-error-5"
+                id="party-name-error-5"
               />
             </div>
           </div>
