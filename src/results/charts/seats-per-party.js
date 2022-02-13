@@ -1,12 +1,12 @@
 import { Bar } from "react-chartjs-2";
 import { getColorByIndex } from "../../misc";
 import { font } from "./_helpers";
-import { neutral } from "../../_sys.scss";
+import s from "../../_sys.scss";
 
 const options = {
     plugins: {
         title: { text: 'Seats per party', display: true, font: font  },
-        datalabels: { color: neutral, font: {...font} }
+        datalabels: { color: s.neutral, font: {...font} }
     },
     responsive: true,
     maintainAspectRatio: true,

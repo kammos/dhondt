@@ -1,12 +1,12 @@
 import { Bar } from "react-chartjs-2";
 import { seatsFormatter } from "../../misc/seats-formatter";
 import { font } from "./_helpers";
-import { neutral, plus, minus } from "../../_sys.scss";
+import s from "../../_sys.scss";
 
 const options = {
     plugins: {
         title: { text: 'Difference from ideal number of seats', display: true, font: { weight: 'bold', size: 16 } },
-        datalabels: { color: neutral, formatter: seatsFormatter, font: font},
+        datalabels: { color: s.neutral, formatter: seatsFormatter, font: font},
     },
     responsive: true,
     maintainAspectRatio: true,
@@ -32,7 +32,7 @@ export const DifferenceFromIdeal = ({parties}) => {
         datasets: [{
             label: `Seats gained or lost due to inaccuracy of D'Hondt method`,
             data: parties.map(party => party.difference),
-            backgroundColor: parties.map(party => party.difference > 0 ? plus : minus),
+            backgroundColor: parties.map(party => party.difference > 0 ? s.plus : s.minus),
         }]
     }
 

@@ -20,9 +20,10 @@ module.exports = merge(common, {
                 {
                     loader: 'css-loader',
                     options: {
-                        localsConvention: "camelCase",
                         modules: {
-                            localIdentName: "[local]-[hash:base64:5]"
+                            exportLocalsConvention: "camelCase",
+                            localIdentName: "[local]-[hash:base64:5]",
+                            mode: "local"
                         },
                     }
                 },
