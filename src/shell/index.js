@@ -6,6 +6,7 @@ import s from "./styles.scss";
 
 const Results = lazy(() => import("../results"));
 const Calculator = lazy(() => import("../calculator/component"));
+const About = lazy(() => import("../about"));
 
 export const Shell = () => {
     return <Router hook={useHashLocation}>
@@ -22,7 +23,7 @@ export const Shell = () => {
                 <Suspense fallback={null}>
                     <Switch>
                         <Route path="/about">
-                            the about
+                            <About />
                         </Route>
                         <Route path="/setup">
                             <Calculator />

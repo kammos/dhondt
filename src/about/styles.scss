@@ -1,0 +1,12 @@
+@use "../sys";
+
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+.box {
+    background: sys.$neutral000;
+    box-shadow: sys.$shadow;
+    padding: sys.$w24;
+}
